@@ -3,97 +3,270 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI 개인 건강관리</title>
+  <title>HealthAI — AI 통합 건강 분석 시스템</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="logo-icon">🩺</div>
-    <div>
-      <div class="logo-text">HealthAI</div>
-      <div class="logo-sub">AI 기반 건강 패턴 분석 시스템</div>
+  <!-- ── 상단 네비게이션 ── -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">HealthAI</span>
+      </div>
+      <div class="nav-links">
+        <a href="#how-it-works">이용 방법</a>
+        <a href="#analysis-section">건강 분석</a>
+        <a href="#disclaimer-section">유의사항</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <div class="page-wrapper">
-    <h1 class="page-title">건강 상태 통합 분석</h1>
-    <p class="page-subtitle">현재 증상과 생활 패턴을 입력하시면 AI가 연관성을 분석하고 관리 방향을 제안합니다.</p>
-
-    <div class="card">
-      <form id="healthForm">
-
-        <div class="field-group">
-          <div class="field-label">
-            <span class="step-badge">1</span>
-            주요 증상
-          </div>
-          <input type="text" id="mainSymptom" placeholder="예: 무릎 통증, 두통, 피로감" />
-        </div>
-
-        <div class="field-group">
-          <div class="field-label">
-            <span class="step-badge">2</span>
-            에너지 상태
-          </div>
-          <div class="select-wrapper">
-            <select id="energy">
-              <option value="good">활력 있음</option>
-              <option value="normal">보통</option>
-              <option value="low">쉽게 피곤</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field-group">
-          <div class="field-label">
-            <span class="step-badge">3</span>
-            수면 상태
-          </div>
-          <div class="select-wrapper">
-            <select id="sleep">
-              <option value="good">잘 잠</option>
-              <option value="bad">잠들기 어렵거나 자주 깸</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field-group">
-          <div class="field-label">
-            <span class="step-badge">4</span>
-            스트레스
-          </div>
-          <div class="select-wrapper">
-            <select id="stress">
-              <option value="low">낮음</option>
-              <option value="medium">보통</option>
-              <option value="high">높음</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field-group">
-          <div class="field-label">
-            <span class="step-badge">5</span>
-            소화 상태
-          </div>
-          <div class="select-wrapper">
-            <select id="digestion">
-              <option value="good">편안함</option>
-              <option value="bad">더부룩 / 변비 / 설사</option>
-            </select>
-          </div>
-        </div>
-
-        <hr class="form-divider" />
-
-        <button type="submit" class="btn-submit">통합 분석 시작</button>
-        <p class="disclaimer">본 서비스는 의학적 진단을 대체하지 않으며, 참고 목적으로만 사용하시기 바랍니다.</p>
-      </form>
+  <!-- ── 히어로 섹션 ── -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1400&q=80"
+        alt="의료 상담 이미지"
+        class="hero-img"
+      />
+      <div class="hero-overlay"></div>
     </div>
+    <div class="hero-content">
+      <div class="hero-badge">AI 기반 예방 의학 플랫폼</div>
+      <h1 class="hero-title">병원 방문 전,<br>먼저 내 몸을 이해하세요</h1>
+      <p class="hero-desc">
+        기능의학 · 영양학 · 한의학 · 양방 4가지 관점에서<br>
+        현재 증상과 생활 패턴을 종합 분석합니다.
+      </p>
+      <a href="#analysis-section" class="hero-cta">무료 건강 분석 시작</a>
+    </div>
+  </section>
 
+  <!-- ── 신뢰 지표 바 ── -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>개인정보 비저장</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        <span>분석 소요 시간 즉시</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span>4개 의학 관점 통합</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>무료 · 회원가입 불필요</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 이용 방법 섹션 ── -->
+  <section class="how-section" id="how-it-works">
+    <div class="section-wrapper">
+      <div class="section-eyebrow">HOW IT WORKS</div>
+      <h2 class="section-title">3단계로 내 건강 패턴을 파악하세요</h2>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-img-wrap">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="증상 입력" />
+          </div>
+          <div class="step-num">01</div>
+          <h3>증상 및 상태 입력</h3>
+          <p>현재 불편한 증상, 에너지·수면·스트레스·소화 상태를 5가지 항목으로 간단히 입력합니다.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-img-wrap">
+            <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80" alt="AI 분석" />
+          </div>
+          <div class="step-num">02</div>
+          <h3>AI 통합 패턴 분석</h3>
+          <p>기능의학·영양학·한의학·양방 4가지 관점으로 증상의 연관성과 근본 원인 패턴을 분석합니다.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-img-wrap">
+            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80" alt="관리 방향" />
+          </div>
+          <div class="step-num">03</div>
+          <h3>맞춤 관리 방향 확인</h3>
+          <p>분석 결과를 바탕으로 개인화된 관리 방향을 제안합니다. 전문의 상담 시 참고 자료로 활용하세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 분석 폼 섹션 ── -->
+  <section class="form-section" id="analysis-section">
+    <div class="form-section-inner">
+
+      <div class="form-left">
+        <div class="section-eyebrow" style="color:#93c5fd;">AI 건강 분석</div>
+        <h2 class="form-left-title">지금 바로<br>내 건강 상태를<br>확인해보세요</h2>
+        <p class="form-left-desc">5가지 핵심 건강 지표를 입력하면 동양·서양 의학을 아우르는 통합 분석 리포트를 즉시 받아볼 수 있습니다.</p>
+
+        <div class="approach-list">
+          <div class="approach-item">
+            <div class="approach-dot purple"></div>
+            <div>
+              <strong>기능의학</strong>
+              <span>HPA축·장내 환경·호르몬 패턴 분석</span>
+            </div>
+          </div>
+          <div class="approach-item">
+            <div class="approach-dot green"></div>
+            <div>
+              <strong>영양학</strong>
+              <span>결핍 영양소·식이 전략 제안</span>
+            </div>
+          </div>
+          <div class="approach-item">
+            <div class="approach-dot yellow"></div>
+            <div>
+              <strong>한의학</strong>
+              <span>기혈·장부 패턴 및 한방 처방 방향</span>
+            </div>
+          </div>
+          <div class="approach-item">
+            <div class="approach-dot blue"></div>
+            <div>
+              <strong>양방 의학</strong>
+              <span>의심 질환·권장 검사 항목 안내</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-right">
+        <div class="card">
+          <div class="card-top-bar"></div>
+          <form id="healthForm">
+
+            <div class="field-group">
+              <div class="field-label">
+                <span class="step-badge">1</span>
+                주요 증상
+              </div>
+              <input type="text" id="mainSymptom" placeholder="예: 무릎 통증, 두통, 만성 피로" />
+            </div>
+
+            <div class="fields-row">
+              <div class="field-group">
+                <div class="field-label">
+                  <span class="step-badge">2</span>
+                  에너지 상태
+                </div>
+                <div class="select-wrapper">
+                  <select id="energy">
+                    <option value="good">활력 있음</option>
+                    <option value="normal">보통</option>
+                    <option value="low">쉽게 피곤</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <div class="field-label">
+                  <span class="step-badge">3</span>
+                  수면 상태
+                </div>
+                <div class="select-wrapper">
+                  <select id="sleep">
+                    <option value="good">잘 잠</option>
+                    <option value="bad">불면 / 자주 깸</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="fields-row">
+              <div class="field-group">
+                <div class="field-label">
+                  <span class="step-badge">4</span>
+                  스트레스
+                </div>
+                <div class="select-wrapper">
+                  <select id="stress">
+                    <option value="low">낮음</option>
+                    <option value="medium">보통</option>
+                    <option value="high">높음</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <div class="field-label">
+                  <span class="step-badge">5</span>
+                  소화 상태
+                </div>
+                <div class="select-wrapper">
+                  <select id="digestion">
+                    <option value="good">편안함</option>
+                    <option value="bad">더부룩 / 변비 / 설사</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <hr class="form-divider" />
+            <button type="submit" class="btn-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              통합 분석 시작
+            </button>
+            <p class="disclaimer">본 서비스는 의학적 진단을 대체하지 않으며, 전문의 상담 전 참고 목적으로만 사용하시기 바랍니다.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 결과 섹션 ── -->
+  <div class="result-wrapper">
     <div id="result"></div>
   </div>
+
+  <!-- ── 주의사항 섹션 ── -->
+  <section class="disclaimer-section" id="disclaimer-section">
+    <div class="section-wrapper">
+      <div class="disclaimer-box">
+        <div class="disclaimer-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div>
+          <h3>의료 서비스 이용 안내</h3>
+          <p>본 HealthAI 서비스는 사용자의 자가 건강 인식 향상을 위한 <strong>정보 제공 목적</strong>으로만 운영됩니다.
+          제공되는 분석 결과는 의학적 진단, 치료, 처방을 대체할 수 없으며, 증상이 지속되거나 악화되는 경우 반드시
+          <strong>의사, 한의사 등 면허를 가진 의료 전문가</strong>와 상담하시기 바랍니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 푸터 ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="nav-logo-icon" style="width:28px;height:28px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>HealthAI</span>
+      </div>
+      <p class="footer-copy">© 2025 HealthAI. 본 서비스는 참고 목적으로만 제공됩니다.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
