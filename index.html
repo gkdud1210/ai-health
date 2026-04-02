@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI 개인 건강관리</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>AI 개인 건강관리 가이드</h1>
+
+ <form id="healthForm">
+
+  <h2>1️⃣ 주요 증상</h2>
+  <input type="text" id="mainSymptom" placeholder="예: 무릎 통증" />
+
+  <h2>2️⃣ 에너지 상태</h2>
+  <select id="energy">
+    <option value="good">활력 있음</option>
+    <option value="normal">보통</option>
+    <option value="low">쉽게 피곤</option>
+  </select>
+
+  <h2>3️⃣ 수면 상태</h2>
+  <select id="sleep">
+    <option value="good">잘 잠</option>
+    <option value="bad">잠들기 어렵거나 자주 깸</option>
+  </select>
+
+  <h2>4️⃣ 스트레스</h2>
+  <select id="stress">
+    <option value="low">낮음</option>
+    <option value="medium">보통</option>
+    <option value="high">높음</option>
+  </select>
+
+  <h2>5️⃣ 소화 상태</h2>
+  <select id="digestion">
+    <option value="good">편안함</option>
+    <option value="bad">더부룩/변비/설사</option>
+  </select>
+
+  <button type="submit">통합 분석</button>
+</form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
